@@ -1,0 +1,47 @@
+PVector locacion;
+PVector velocidad;
+
+void setup() {
+  size(500,500);
+  smooth();
+  background(0);
+  locacion = new PVector(100,100);
+  velocidad = new PVector(2.5,5);
+}
+
+void draw() {
+  background(0);
+  noStroke();
+  fill(255,10);
+  rect(0,0,width,height);
+  
+  locacion.add(velocidad); // Suma de la velocidad a la locacin
+
+  if ((locacion.x > width) || (locacion.x < 0)) {
+    velocidad.x = velocidad.x * -1;
+  }
+  if ((locacion.y > height) || (locacion.y < 0)) {
+    velocidad.y = velocidad.y * -1;
+  }
+  stroke(0);
+  fill(#FF0324);
+  ellipse(locacion.x,locacion.y,100,100);
+  fill(#FF03B4);
+  ellipse(locacion.x,locacion.y,90,90);
+  fill(#B703FF);
+  ellipse(locacion.x,locacion.y,80,80);
+  fill(#5103FF);
+  ellipse(locacion.x,locacion.y,70,70);
+  fill(#0365FF);
+  ellipse(locacion.x,locacion.y,60,60);
+  fill(#03DBFF);
+  ellipse(locacion.x,locacion.y,50,50);
+  fill(#03FF76);
+  ellipse(locacion.x,locacion.y,40,40);
+  fill(#3CFF03);
+  ellipse(locacion.x,locacion.y,30,30);
+  fill(#FAFF03);
+  ellipse(locacion.x,locacion.y,20,20);
+  fill(#FF7003);
+  ellipse(locacion.x,locacion.y,10,10);
+}
